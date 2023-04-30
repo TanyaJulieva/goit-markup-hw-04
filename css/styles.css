@@ -9,6 +9,7 @@
   --dark-bg-color: #2e2f42;
   --card-bg-color: #ffffff;
   --cta-color: #4d5ae5;
+  --customer-icon-color: #8E8F99;
 }
 .list {
   list-style: none;
@@ -148,8 +149,14 @@ body {
 
 .hero {
   padding: 188px 0;
+
   background-color: var(--dark-bg-color);
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)), url(../images/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
+
 .order-serv-btn {
   display: block;
   min-width: 169px;
@@ -206,6 +213,10 @@ body {
 }
 .advantages-list-item {
   width: calc((100%-24px * 3) / 4);
+}
+
+.advantages-icon {
+  margin-bottom: 32px;
 }
 
 .filter-btn:hover,
@@ -277,10 +288,58 @@ body {
 }
 
 .text {
+  margin-bottom: 8px;
+
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--primary-txt-color);
+}
+
+.social {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  background-color: var(--cta-color);
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-link:hover {
+  background-color: var(--active-color);
+}
+
+.customers-list {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.customer-item {
+  padding: 16px 32px;
+
+  border: 1px solid var(--customer-icon-color);
+  border-radius: 4px;
+}
+.customer-icon {
+  fill: var(--customer-icon-color);
+}
+
+.customer-item:hover .customer-icon {
+  fill: var(--active-color);
+}
+
+.customer-item:hover {
+  border: 1px solid var(--active-color);
 }
 
 .btn-list {
