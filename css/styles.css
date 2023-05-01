@@ -51,6 +51,8 @@ body {
 
 .page-header {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -154,6 +156,9 @@ body {
 
 .hero {
   padding: 188px 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1440px;
 
   background-color: var(--dark-bg-color);
   background-image: linear-gradient(
@@ -225,10 +230,14 @@ body {
 }
 
 .advantages-icon-cont {
-  padding: 24px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 112px;
   margin-bottom: 8px;
 
   background-color: var(--light-bg-color);
+  border-radius: 4px;
 }
 
 .filter-btn:hover,
@@ -296,7 +305,7 @@ body {
 }
 
 .card-content {
-  padding: 32px 16px;
+  padding: 32px 0;
 }
 .team-subtitle,
 .team-text {
@@ -334,8 +343,13 @@ body {
   border-radius: 50%;
 }
 
-.social-link:hover {
+.social-link:hover,
+.social-link:focus {
   background-color: var(--active-color);
+}
+
+.social-icon {
+  fill: var(--txt-color-dark-theme);
 }
 
 .customers-list {
@@ -346,17 +360,34 @@ body {
 }
 
 .customer-item {
-  padding: 16px 32px;
+  width: calc((100%-120px) / 6);
+  height: 88px;
 
   border: 1px solid var(--customer-icon-color);
   border-radius: 4px;
 }
-.customer-icon {
-  fill: var(--customer-icon-color);
+
+.customer-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  color: var(--customer-icon-color);
+
+  border: 1px solid var(--customer-icon-color);
+  border-radius: 4px;
 }
 
-.customer-item:hover .customer-icon {
-  fill: var(--active-color);
+.customer-icon {
+  fill: currentColor;
+}
+
+.customer-link:hover,
+.customer-link:focus {
+  border-color: var(--active-color);
+  color: var(--active-color);
 }
 
 .customer-item:hover {
@@ -405,6 +436,7 @@ body {
 .footer-container {
   display: flex;
   gap: 120px;
+  align-items: baseline;
 }
 
 .text-footer {
@@ -458,6 +490,7 @@ body {
   border-radius: 50%;
 }
 
-.footer-social-link:hover {
+.footer-social-link:hover,
+.footer-social-link:focus {
   background-color: var(--footer-active-color);
 }
