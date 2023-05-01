@@ -464,7 +464,7 @@ body {
 
   font-weight: 500;
   font-size: 16px;
-  line-height: 1, 5;
+  line-height: 1,5;
   letter-spacing: 0.02em;
   color: var(--white-txt-color);
 }
@@ -493,4 +493,8 @@ body {
 .footer-social-link:hover,
 .footer-social-link:focus {
   background-color: var(--footer-active-color);
+}
+
+.footer-social-icon {
+  fill: var(--txt-color-dark-theme);
 }
